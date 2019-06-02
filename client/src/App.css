@@ -155,6 +155,13 @@ img {
   background: var(--light-color);
   color: #333;
 }
+.remove-alert {
+  float: right;
+  margin: -22px -18px;
+  color: #000000;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
 
 .btn-primary,
 .bg-primary,
