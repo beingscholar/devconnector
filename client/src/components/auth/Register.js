@@ -7,8 +7,6 @@ import { register } from '../../actions/auth';
 
 import PropTypes from 'prop-types';
 
-// import Config from '../../apis/Config';
-
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setformData] = useState({
     name: '',
@@ -43,9 +41,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     }
   };
 
-  if (isAuthenticated) {
-    return <Redirect to="/dashboard" />;
-  }
+  if (isAuthenticated) return <Redirect to="/dashboard" />;
 
   return (
     <Fragment>

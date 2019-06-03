@@ -17,7 +17,7 @@ router.get('/', auth, async (req, res) => {
     let user = await User.findById(req.user.id).select('-password');
     return res.json(user);
   } catch (error) {
-    return res.status(500).json({ msg: error.message });
+    return res.status(500).json({ errors: [{ msg: errors.message }] });
   }
   // res.send('Auth route');
 });
